@@ -11,21 +11,21 @@ else
 	exit 255
 fi
 
-case "$prefix_name" in
-	armv7l)
+case "$ndk_triple" in
+	arm-*)
 		abi="armeabi-v7a"
 		;;
-	arm64)
+	aarch64-*)
 		abi="arm64-v8a"
 		;;
-	x86)
+	i686-*)
 		abi="x86"
 		;;
-	x86_64)
+	x86_64-*)
 		abi="x86_64"
 		;;
 	*)
-		echo "Invalid architecture: $prefix_name" >&2
+		echo "Invalid architecture: $ndk_triple" >&2
 		exit 1
 		;;
 esac
