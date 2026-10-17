@@ -82,6 +82,10 @@ if [ ! -d curl ]; then
 		tar -xz -C curl --strip-components=1
 fi
 
+# libmysofa
+[ ! -d libmysofa ] && git clone --depth 1 -b v$v_libmysofa https://github.com/hoene/libmysofa
+
+
 # mpv
 [ ! -d mpv ] && git clone https://github.com/mpv-player/mpv
 
