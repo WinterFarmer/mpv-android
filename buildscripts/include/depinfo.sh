@@ -18,6 +18,8 @@ v_mbedtls=3.6.7
 v_libxml2=2.15.4
 v_fontconfig=2.18.3
 v_curl=8.22.0
+v_libmysofa=1.3.3
+
 
 
 ## Dependency tree
@@ -37,6 +39,8 @@ dep_libplacebo=()
 dep_curl=(mbedtls)
 dep_mpv=(ffmpeg libass lua libplacebo curl)
 dep_mpv_android=(mpv)
+dep_libmysofa=()
+dep_ffmpeg=(mbedtls dav1d libxml2 libmysofa)
 
 
 ## for CI workflow
@@ -45,4 +49,4 @@ dep_mpv_android=(mpv)
 v_ci_ffmpeg=n9.0
 
 # filename used to uniquely identify a build prefix
-ci_tarball="prefix-n${v_ndk}-l${v_lua}-u${v_unibreak}-h${v_harfbuzz}-fr${v_fribidi}-ft${v_freetype}-x${v_libxml2}-fo${v_fontconfig}-m${v_mbedtls}-c${v_curl}-ff${v_ci_ffmpeg}.tgz"
+ci_tarball="prefix-n${v_ndk}-l${v_lua}-u${v_unibreak}-h${v_harfbuzz}-fr${v_fribidi}-ft${v_freetype}-x${v_libxml2}-fo${v_fontconfig}-m${v_mbedtls}-c${v_curl}-s${v_libmysofa}-ff${v_ci_ffmpeg}.tgz"
