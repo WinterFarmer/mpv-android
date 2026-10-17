@@ -83,7 +83,7 @@ if [ ! -d curl ]; then
 fi
 
 # libmysofa
-[ ! -d libmysofa ] && git clone --depth 1 -b v$v_libmysofa https://github.com/hoene/libmysofa
+[ ! -d libmysofa ] && git clone --depth 1 https://github.com/hoene/libmysofa
 
 
 # mpv
